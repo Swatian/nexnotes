@@ -1,4 +1,5 @@
-[![License: GPL v3](https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/license.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Release](https://img.shields.io/badge/dynamic/json.svg?label=release&url=https://api.github.com/repos/Swatian/nexnotes/releases/tags&query=$[0].tag_name)](https://github.com/Swatian/nexnotes/releases)
+[![License: GPL v3](https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/license.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Release](https://img.shields.io/github/v/release/Swatian/nexnotes?display_name=release&label=release
+)](https://github.com/Swatian/nexnotes/releases)
 
 [<img alt="Become a Patreon" src="https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/patreon.png" height="40"/>](https://www.patreon.com/mmarif) [<img alt="Buy me a coffee" src="https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/buy-me-a-coffee.png" height="40"/>](https://www.buymeacoffee.com/mmarif)
 
