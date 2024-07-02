@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name" translatable="false">Nex Notes</string>
+    <string name="patreon" translatable="false">Patreon</string>
+    <string name="link_patreon" translatable="false">https://www.patreon.com/mmarif</string>
+    <string name="buy_me_a_coffee" translatable="false">Buy Me a Coffee</string>
+    <string name="link_buy_me_a_coffee" translatable="false">https://www.buymeacoffee.com/mmarif</string>
+    <string name="app_website_link" translatable="false">https://nexnotes.swatian.com</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="support_text_patreon" translatable="false">Patreon</string>
+    <string name="support_text_buy_me_a_coffee" translatable="false">Buy Me a Coffee</string>
+    <string name="crowd_in_text" translatable="false">Crowdin</string>
+    <string name="crowd_in_link" translatable="false">https://crowdin.com/project/nexnotes</string>
+    <string name="source_code_link" translatable="false">https://github.com/Swatian/nexnotes</string>
+
+    <string name="settings_biometric_header">Biometric lock</string>
+    <string name="created_with">Created %s</string>
+    <string name="updated_with">Updated %s</string>
+    <string name="nothing_found">It\'s quiet here</string>
+    <string name="delete_note_dialog_message">Do you really want to delete this note?</string>
+    <plurals name="note_delete_message">
+        <item quantity="one">Note deleted successfully</item>
+        <item quantity="other">Notes deleted successfully</item>
+    </plurals>
+    <string name="all_good">You\'re all caught up</string>
+    <string name="delete_notes">Delete all notes</string>
+    <string name="note_content_hint">Start taking your notes here…</string>
+    <string name="delete_all_notes_dialog_message">This will delete all of your notes. This action cannot be undone.</string>
+    <string name="delete_topic_dialog_message">You are about to delete a topic. Press Delete to continue.</string>
+    <string name="delete_topic_message">Topic deleted successfully</string>
+    <string name="topic_created">Topic created</string>
+    <string name="biometric_auth_title">Biometric authentication</string>
+    <string name="biometric_auth_sub_title">Unlock using your biometric credentials</string>
+    <string name="settings_saved">Settings saved</string>
+    <string name="enroll_biometric">Enroll biometric from phone settings</string>
+    <string name="biometric_not_supported">No biometric features available on this device</string>
+    <string name="biometric_not_available">Biometric features are currently unavailable</string>
+    <string name="settings_language_selector_dialog_title">Choose language</string>
+    <string name="source_code">Source code</string>
+
+    <!-- errors -->
+    <string name="generic_error">Something went wrong</string>
+    <string name="browser_open_failed">No application found to open this link</string>
+    <string name="topic_exists">Topic already exists</string>
+    <string name="topic_min_characters">Topic should be at least 2 characters long</string>
+    <!-- errors -->
+
+    <!-- generic terms -->
+    <string name="notes">Notes</string>
+    <string name="topics">Topics</string>
+    <string name="topic">Topic</string>
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="app">App</string>
+    <string name="generic_img_copy">image</string>
+    <string name="cancel">Cancel</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="new_text">New</string>
+    <string name="error">error</string>
+    <string name="ok">OK</string>
+    <string name="proceed">Proceed</string>
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="active">Active</string>
+    <string name="delete">Delete</string>
+    <string name="accounts">Accounts</string>
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
+    <string name="name">Name</string>
+    <string name="about">About</string>
+    <string name="website">Website</string>
+    <string name="system">System</string>
+    <string name="search">Search</string>
+    <string name="display">Display</string>
+    <string name="translation">Translation</string>
+    <string name="security">Security</string>
+    <string name="version">Version</string>
+    <string name="links">Links</string>
+    <string name="close">Close</string>
+    <string name="description">Description</string>
+    <string name="create">Create</string>
+    <string name="database">Database</string>
+    <string name="title">Title (mandatory)</string>
+    <string name="general">General</string>
+    <!-- generic terms -->
+</resources>

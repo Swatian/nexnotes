@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen6dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?attr/materialCardViewElevatedStyle"
+        app:cardElevation="@dimen/dimen0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen12dp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen20sp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen4dp"
+                android:textSize="@dimen/dimen14sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/note_topic_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                style="?attr/materialCardViewElevatedStyle"
+                app:cardCornerRadius="@dimen/dimen8dp"
+                android:visibility="gone"
+                app:cardElevation="@dimen/dimen0dp">
+
+                <TextView
+                    android:id="@+id/notes_topic_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dimen20dp"
+                    android:minWidth="@dimen/dimen48dp"
+                    android:background="@color/biometric_error_color"
+                    android:paddingStart="@dimen/dimen8dp"
+                    android:paddingEnd="@dimen/dimen8dp"
+                    android:paddingTop="@dimen/dimen0dp"
+                    android:paddingBottom="@dimen/dimen2dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen14sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/note_info_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8dp"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/datetime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/dimen12sp" />
+
+                <ImageView
+                    android:id="@+id/delete_note"
+                    android:layout_width="@dimen/dimen20dp"
+                    android:layout_height="@dimen/dimen20dp"
+                    android:layout_marginStart="@dimen/dimen4dp"
+                    android:layout_marginEnd="@dimen/dimen2dp"
+                    android:contentDescription="@string/generic_img_copy"
+                    app:srcCompat="@drawable/ic_trash"
+                    app:tint="?attr/iconsColor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

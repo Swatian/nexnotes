@@ -1,0 +1,58 @@
+[versions]
+agp = "8.4.2"
+junit = "4.13.2"
+junitVersion = "1.2.0"
+espressoCore = "3.6.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+constraintlayout = "2.1.4"
+lifecycleLivedataKtx = "2.8.2"
+lifecycleViewmodelKtx = "2.8.2"
+navigationFragment = "2.7.7"
+navigationUi = "2.7.7"
+notiesMarkwon = "4.6.2"
+prettytime = "5.0.7.Final"
+roomDB = "2.6.1"
+biometric = "1.1.0"
+annotation = "1.8.0"
+swiperefreshlayout = "1.1.0"
+desugar_jdk_libs = "2.0.4"
+emoji-java = "v5.1.2"
+browser = "1.8.0"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
+notiesmarkwon-core = { group = "io.noties.markwon", name = "core", version.ref = "notiesMarkwon" }
+notiesmarkwon-ext-latex = { group = "io.noties.markwon", name = "ext-latex", version.ref = "notiesMarkwon" }
+notiesmarkwon-ext-strikethrough = { group = "io.noties.markwon", name = "ext-strikethrough", version.ref = "notiesMarkwon" }
+notiesmarkwon-ext-tables = { group = "io.noties.markwon", name = "ext-tables", version.ref = "notiesMarkwon" }
+notiesmarkwon-ext-tasklist = { group = "io.noties.markwon", name = "ext-tasklist", version.ref = "notiesMarkwon" }
+notiesmarkwon-html = { group = "io.noties.markwon", name = "html", version.ref = "notiesMarkwon" }
+notiesmarkwon-image = { group = "io.noties.markwon", name = "image", version.ref = "notiesMarkwon" }
+notiesmarkwon-image-glide = { group = "io.noties.markwon", name = "image-glide", version.ref = "notiesMarkwon" }
+notiesmarkwon-linkify = { group = "io.noties.markwon", name = "linkify", version.ref = "notiesMarkwon" }
+notiesmarkwon-recycler = { group = "io.noties.markwon", name = "recycler", version.ref = "notiesMarkwon" }
+notiesmarkwon-recycler-table = { group = "io.noties.markwon", name = "recycler-table", version.ref = "notiesMarkwon" }
+notiesmarkwon-ext-simple = { group = "io.noties.markwon", name = "simple-ext", version.ref = "notiesMarkwon" }
+notiesmarkwon-editor = { group = "io.noties.markwon", name = "editor", version.ref = "notiesMarkwon" }
+prettytime = { group = "org.ocpsoft.prettytime", name = "prettytime", version.ref = "prettytime" }
+room-db = { group = "androidx.room", name = "room-runtime", version.ref = "roomDB" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomDB" }
+biometric = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+emoji-java = { group = "org.codeberg.gitnex-garage", name = "emoji-java", version.ref = "emoji-java" }
+browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

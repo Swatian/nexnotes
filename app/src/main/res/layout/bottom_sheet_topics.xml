@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main_frame"
+    android:padding="@dimen/dimen16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/close_bs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/close"
+            app:srcCompat="@drawable/ic_arrow_back"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/iconsColor" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/generic_img_copy"
+            app:srcCompat="@drawable/ic_check"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/iconsColor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen18dp"
+        android:layout_marginBottom="@dimen/dimen6dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/topic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen48dp"
+            android:autofillHints="@string/title"
+            android:background="@drawable/shape_input"
+            android:lineSpacingExtra="@dimen/dimen8sp"
+            android:gravity="start"
+            android:singleLine="true"
+            android:inputType="textCapSentences"
+            android:maxLength="30"
+            android:hint="@string/topic"
+            android:textSize="@dimen/dimen16sp" />
+
+    </LinearLayout>
+
+    <!-- fake expand the height -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+

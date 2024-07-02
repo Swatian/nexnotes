@@ -1,0 +1,95 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id "com.diffplug.spotless" version "6.25.0"
+}
+
+android {
+    namespace 'com.swatian.nexnotes'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.swatian.nexnotes"
+        minSdk 27
+        targetSdk 34
+        versionCode 10
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions = ["default"]
+    productFlavors {
+        free {
+            applicationId "com.swatian.nexnotes"
+        }
+        premium {
+            applicationId "com.swatian.nexnotes.premium"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled = true
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.notiesmarkwon.core
+    implementation libs.notiesmarkwon.ext.latex
+    implementation libs.notiesmarkwon.ext.strikethrough
+    implementation libs.notiesmarkwon.ext.tables
+    implementation libs.notiesmarkwon.ext.tasklist
+    implementation libs.notiesmarkwon.ext.simple
+    implementation libs.notiesmarkwon.html
+    implementation libs.notiesmarkwon.image
+    implementation libs.notiesmarkwon.image.glide
+    implementation libs.notiesmarkwon.linkify
+    implementation libs.notiesmarkwon.recycler
+    implementation libs.notiesmarkwon.recycler.table
+    implementation libs.notiesmarkwon.editor
+    implementation libs.prettytime
+    implementation libs.room.db
+    implementation libs.annotation
+    annotationProcessor libs.room.compiler
+    implementation libs.biometric
+    implementation libs.browser
+    coreLibraryDesugaring libs.desugar.jdk.libs
+    implementation libs.emoji.java
+    implementation libs.swiperefreshlayout
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
+
+spotless {
+    java {
+        target 'src/**/*.java'
+
+        importOrder('android', 'androidx', 'com', 'junit', 'net', 'org', 'java', 'javax', '', '\\#')
+
+        removeUnusedImports()
+        googleJavaFormat().aosp()
+        indentWithTabs()
+        formatAnnotations()
+    }
+}

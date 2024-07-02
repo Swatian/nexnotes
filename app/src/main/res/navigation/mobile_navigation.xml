@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_notes">
+
+    <fragment
+        android:id="@+id/navigation_notes"
+        android:name="com.swatian.nexnotes.fragments.NotesFragment"
+        android:label="@string/notes"
+        tools:layout="@layout/fragment_notes" />
+
+    <fragment
+        android:id="@+id/navigation_topics"
+        android:name="com.swatian.nexnotes.fragments.TopicsFragment"
+        android:label="@string/topics"
+        tools:layout="@layout/fragment_topics" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.swatian.nexnotes.fragments.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_topics" />
+
+</navigation>

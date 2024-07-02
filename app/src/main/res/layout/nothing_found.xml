@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UseCompoundDrawables"
+    android:id="@+id/nothing_found_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:layout_margin="@dimen/dimen16dp">
+
+    <ImageView
+        android:layout_width="@dimen/dimen60dp"
+        android:layout_height="@dimen/dimen60dp"
+        android:contentDescription="@string/nothing_found"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_rocket" />
+
+    <TextView
+        android:id="@+id/nothing_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/nothing_found"
+        android:textSize="@dimen/dimen18sp" />
+
+</LinearLayout>
