@@ -1,0 +1,12 @@
+1.1
+
+🎉 Features
+- Free and open source
+- Topics for easy management
+- Biometric lock
+- Localized
+- Search by title, content and topic
+- Light/dark theme (follows system)
+- & more... 
+
+https://github.com/Swatian/nexnotes/releases 

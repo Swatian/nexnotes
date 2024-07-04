@@ -1,0 +1,14 @@
+A simple and free native Android app for taking notes.
+
+# Features
+
+- Free and open source
+- Topics for easy management
+- Biometric lock
+- Localized
+- Search by title, content and topic
+- Light/dark theme (follows system)
+- & more...
+
+Source code: https://github.com/Swatian/nexnotes
+Developer: https://mastodon.social/@mmarif
