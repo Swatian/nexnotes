@@ -10,6 +10,7 @@ Nex Notes is licensed under the GPLv3 License. Please refer to the LICENSE file 
 
 ## Downloads
 
+[<img alt='Get it on F-Droid' src='https://fdroid.gitlab.io/artwork/badge/get-it-on.png' height="80"/>](https://f-droid.org/packages/com.swatian.nexnotes/)
 [<img alt='Get it on Google Play' src='https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/google-play.png' height="80"/>](https://play.google.com/store/apps/details?id=com.swatian.nexnotes.premium)
 [<img alt='Download builds and releases' src='https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/apk-badge.png' height="82"/>](https://github.com/Swatian/nexnotes/releases)
 
