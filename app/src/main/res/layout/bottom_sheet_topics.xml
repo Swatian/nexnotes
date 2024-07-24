@@ -24,18 +24,17 @@
             android:background="?android:attr/selectableItemBackgroundBorderless"
             app:tint="?attr/iconsColor" />
 
-        <ImageView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/save"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dimen54dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_gravity="center"
-            android:contentDescription="@string/generic_img_copy"
-            app:srcCompat="@drawable/ic_check"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            app:tint="?attr/iconsColor" />
+            android:contentDescription="@string/save"
+            android:text="@string/save"
+            style="@style/CustomMaterialButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -49,7 +48,7 @@
         <EditText
             android:id="@+id/topic"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen48dp"
+            android:layout_height="@dimen/dimen54dp"
             android:autofillHints="@string/title"
             android:background="@drawable/shape_input"
             android:lineSpacingExtra="@dimen/dimen8sp"

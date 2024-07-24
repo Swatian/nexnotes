@@ -8,14 +8,17 @@
     </solid>
 
     <corners
-        android:radius="@dimen/dimen18dp">
+        android:topRightRadius="@dimen/dimen16dp"
+        android:topLeftRadius="@dimen/dimen16dp"
+        android:bottomLeftRadius="@dimen/dimen16dp"
+        android:bottomRightRadius="@dimen/dimen4dp">
     </corners>
 
     <padding
         android:bottom="@dimen/dimen16dp"
         android:left="@dimen/dimen16dp"
         android:right="@dimen/dimen16dp"
-        android:top="@dimen/dimen16dp">
+        android:top="@dimen/dimen18dp">
     </padding>
 
 </shape>

@@ -23,54 +23,36 @@
             android:background="?android:attr/selectableItemBackgroundBorderless"
             app:tint="?attr/iconsColor" />
 
-        <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/edit_view_toggle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/close_bs"
-            app:selectionRequired="true"
-            app:singleSelection="true"
-            app:checkedButton="@id/edit"
-            app:layout_constraintEnd_toStartOf="@+id/topics">
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
-                android:id="@+id/edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/dimen16dp"
-                android:paddingEnd="@dimen/dimen16dp"
-                android:insetRight="@dimen/dimen2dp"
-                android:layout_gravity="center"
-                app:icon="@drawable/ic_pencil" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
-                android:id="@+id/view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/dimen16dp"
-                android:paddingEnd="@dimen/dimen16dp"
-                android:insetLeft="@dimen/dimen2dp"
-                android:layout_gravity="center"
-                app:icon="@drawable/ic_view" />
-
-        </com.google.android.material.button.MaterialButtonToggleGroup>
-
-        <ImageView
-            android:id="@+id/topics"
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+            android:id="@+id/view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingStart="@dimen/dimen16dp"
+            android:paddingEnd="@dimen/dimen16dp"
+            app:cornerRadius="@dimen/dimen16dp"
             android:layout_gravity="center"
-            android:contentDescription="@string/topics"
-            app:srcCompat="@drawable/ic_topics"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:iconSize="@dimen/dimen20dp"
+            app:icon="@drawable/ic_view" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingStart="@dimen/dimen16dp"
+            android:paddingEnd="@dimen/dimen16dp"
+            app:cornerRadius="@dimen/dimen16dp"
             android:visibility="gone"
-            app:tint="?attr/iconsColor" />
+            android:layout_gravity="center"
+            app:iconSize="@dimen/dimen20dp"
+            app:icon="@drawable/ic_pencil" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -84,48 +66,37 @@
         <EditText
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen48dp"
+            android:layout_height="@dimen/dimen54dp"
             android:autofillHints="@string/title"
-            android:background="@drawable/shape_input_top"
+            android:background="@drawable/shape_input"
             android:lineSpacingExtra="@dimen/dimen8sp"
             android:gravity="start"
             android:singleLine="true"
             android:inputType="textCapSentences"
+            android:layout_marginBottom="@dimen/dimen8dp"
             android:maxLength="160"
             android:hint="@string/title"
             android:textSize="@dimen/dimen16sp" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/topics_dropdown_divider"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen2dp"
-            app:dividerColor="?attr/divider"
-            android:background="?android:attr/listDivider" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/topics_dropdown_layout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen44dp"
+            android:layout_height="@dimen/dimen54dp"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
+            android:layout_marginBottom="@dimen/dimen8dp"
             style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
 
             <AutoCompleteTextView
                 android:id="@+id/topics_dropdown"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen44dp"
+                android:layout_height="@dimen/dimen54dp"
                 android:padding="@dimen/dimen2dp"
                 android:labelFor="@+id/topics_dropdown"
-                android:background="@drawable/shape_input_no_corners"
+                android:background="@drawable/shape_input"
                 android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen2dp"
-            app:dividerColor="?attr/divider"
-            android:background="?android:attr/listDivider" />
 
         <EditText
             android:id="@+id/contents"
@@ -133,7 +104,7 @@
             android:layout_height="match_parent"
             android:minHeight="@dimen/dimen480dp"
             android:autofillHints="@string/notes"
-            android:background="@drawable/shape_input_bottom"
+            android:background="@drawable/shape_input"
             android:lineSpacingExtra="@dimen/dimen8sp"
             android:gravity="top"
             android:inputType="textMultiLine|textImeMultiLine|textCapSentences"
@@ -145,18 +116,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:minHeight="@dimen/dimen480dp"
-            android:background="@drawable/shape_input_bottom"
+            android:background="@drawable/shape_input"
             android:lineSpacingExtra="@dimen/dimen8sp"
             android:textSize="@dimen/dimen16sp"
             android:visibility="gone" />
 
     </LinearLayout>
 
-    <!-- fake expand the height -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
 </LinearLayout>
 

@@ -22,4 +22,18 @@
         <item name="divider">@color/divider_background_light</item>
         <item name="inputColor">@color/input_color_light</item>
     </style>
+
+    <!-- custom material button -->
+    <style name="CustomMaterialButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/ButtonShapeAppearance</item>
+    </style>
+
+    <style name="ButtonShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/dimen16dp</item>
+        <item name="cornerSizeBottomRight">@dimen/dimen4dp</item>
+        <item name="cornerSizeTopLeft">@dimen/dimen16dp</item>
+        <item name="cornerSizeBottomLeft">@dimen/dimen16dp</item>
+    </style>
+    <!-- custom material button -->
 </resources>

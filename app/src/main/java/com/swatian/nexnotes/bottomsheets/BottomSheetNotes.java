@@ -86,9 +86,13 @@ public class BottomSheetNotes extends BottomSheetDialogFragment {
 		bottomSheetNotesBinding.closeBs.setOnClickListener(close -> dismiss());
 
 		bottomSheetNotesBinding.view.setOnClickListener(
-				close -> {
+				view -> {
 					bottomSheetNotesBinding.contents.setVisibility(View.GONE);
 					bottomSheetNotesBinding.renderContents.setVisibility(View.VISIBLE);
+
+					bottomSheetNotesBinding.edit.setVisibility(View.VISIBLE);
+					bottomSheetNotesBinding.view.setVisibility(View.GONE);
+
 					Markdown.render(
 							requireContext(),
 							EmojiParser.parseToUnicode(
@@ -97,9 +101,12 @@ public class BottomSheetNotes extends BottomSheetDialogFragment {
 				});
 
 		bottomSheetNotesBinding.edit.setOnClickListener(
-				close -> {
+				edit -> {
 					bottomSheetNotesBinding.contents.setVisibility(View.VISIBLE);
 					bottomSheetNotesBinding.renderContents.setVisibility(View.GONE);
+
+					bottomSheetNotesBinding.edit.setVisibility(View.GONE);
+					bottomSheetNotesBinding.view.setVisibility(View.VISIBLE);
 				});
 
 		assert noteTopicsApi != null;
@@ -142,7 +149,6 @@ public class BottomSheetNotes extends BottomSheetDialogFragment {
 			bottomSheetNotesBinding.contents.addTextChangedListener(textWatcher);
 		} else if (source.equalsIgnoreCase("new")) {
 
-			bottomSheetNotesBinding.topicsDropdownDivider.setVisibility(View.GONE);
 			bottomSheetNotesBinding.topicsDropdownLayout.setVisibility(View.GONE);
 
 			bottomSheetNotesBinding.title.addTextChangedListener(textWatcher);
@@ -186,8 +192,6 @@ public class BottomSheetNotes extends BottomSheetDialogFragment {
 						} else {
 							if (title.length() > 2) {
 
-								bottomSheetNotesBinding.topicsDropdownDivider.setVisibility(
-										View.VISIBLE);
 								bottomSheetNotesBinding.topicsDropdownLayout.setVisibility(
 										View.VISIBLE);
 

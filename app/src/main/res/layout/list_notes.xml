@@ -30,7 +30,7 @@
                 android:id="@+id/content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen4dp"
+                android:layout_marginTop="@dimen/dimen8dp"
                 android:textSize="@dimen/dimen14sp" />
 
             <com.google.android.material.card.MaterialCardView
@@ -65,7 +65,7 @@
                 android:id="@+id/note_info_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen8dp"
+                android:layout_marginTop="@dimen/dimen12dp"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
 

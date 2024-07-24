@@ -1,0 +1,6 @@
+1.2
+
+- UI updates
+- Other fixes
+
+https://github.com/Swatian/nexnotes/releases 
