@@ -8,8 +8,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="divider_background_light">#FEF7FF</color>
-    <color name="divider_background_dark">#131313</color>
-    <color name="input_color_light">#ECE6F0</color>
-    <color name="input_color_dark">#2E2E35</color>
+    <color name="divider_background_light">#F1E2FD</color>
+    <color name="divider_background_dark">#221C2B</color>
+    <color name="input_color_light">#DFDDE2</color>
+    <color name="input_color_dark">#272F38</color>
 </resources>

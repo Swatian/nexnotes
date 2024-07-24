@@ -8,6 +8,7 @@ A simple and free native Android app for taking notes.
 - Localized
 - Search by title, content and topic
 - Light/dark theme (follows system)
+- Markdown support
 - & more...
 
 Source code: https://github.com/Swatian/nexnotes

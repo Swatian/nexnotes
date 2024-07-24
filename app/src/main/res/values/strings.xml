@@ -72,6 +72,7 @@
     <string name="system">System</string>
     <string name="search">Search</string>
     <string name="display">Display</string>
+    <string name="appearance">Appearance</string>
     <string name="translation">Translation</string>
     <string name="security">Security</string>
     <string name="version">Version</string>
@@ -82,5 +83,6 @@
     <string name="database">Database</string>
     <string name="title">Title (mandatory)</string>
     <string name="general">General</string>
+    <string name="save">Save</string>
     <!-- generic terms -->
 </resources>

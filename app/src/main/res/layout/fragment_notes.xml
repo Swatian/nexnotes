@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/dimen10dp"
-                android:paddingBottom="@dimen/dimen18dp"
+                android:paddingBottom="@dimen/dimen26dp"
                 android:paddingStart="@dimen/dimen10dp"
                 android:paddingEnd="@dimen/dimen10dp"
                 app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="@dimen/dimen10dp"
-            android:paddingBottom="@dimen/dimen18dp"
+            android:paddingBottom="@dimen/dimen26dp"
             android:paddingStart="@dimen/dimen10dp"
             android:paddingEnd="@dimen/dimen10dp">
 
@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="@dimen/dimen32dp"
+        android:layout_marginBottom="@dimen/dimen40dp"
         android:layout_marginEnd="@dimen/dimen16dp"
         android:contentDescription="@string/add"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
