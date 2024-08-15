@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_biometric_header">Biometrische Sperre</string>
+    <string name="created_with">%s erstellt</string>
+    <string name="updated_with">%s geupdated</string>
+    <string name="nothing_found">Es ist ruhig hier</string>
+    <string name="delete_note_dialog_message">Möchten Sie diese Notiz wirklich löschen?</string>
+    <plurals name="note_delete_message">
+        <item quantity="one">Notiz erfolgreich gelöscht</item>
+        <item quantity="other">Notizen erfolgreich gelöscht</item>
+    </plurals>
+    <string name="all_good">Sie haben alle aufgeholt</string>
+    <string name="delete_notes">Alle Notizen löschen</string>
+    <string name="note_content_hint">Nehmen Sie Ihre Notizen hierher…</string>
+    <string name="delete_all_notes_dialog_message">Dies wird alle ihre Notizen benutzen. Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="delete_topic_dialog_message">Sie versuchen ein Thema zu löschen. Drücken Sie Entfernen um fortzufahren.</string>
+    <string name="delete_topic_message">Thema erfolgreich gelöscht</string>
+    <string name="topic_created">Thema erstellt</string>
+    <string name="biometric_auth_title">Biometrische Authentifizierung</string>
+    <string name="biometric_auth_sub_title">Mit Ihren biometrischen Daten entsperren</string>
+    <string name="settings_saved">Einstellungen gespeichert</string>
+    <string name="enroll_biometric">Biometrische Daten über die Telefoneinstellungen registrieren</string>
+    <string name="biometric_not_supported">Auf diesem Gerät sind keine biometrischen Features vorhanden</string>
+    <string name="biometric_not_available">Biometrische Features sind im Moment nicht vorhanden</string>
+    <string name="settings_language_selector_dialog_title">Sprache auswählen</string>
+    <string name="source_code">Quellcode</string>
+    <!-- errors -->
+    <string name="generic_error">Etwas ist schiefgelaufen</string>
+    <string name="browser_open_failed">Keine Anwendung gefunden, um diesen Link zu öffnen</string>
+    <string name="topic_exists">Thema existiert bereits</string>
+    <string name="topic_min_characters">Thema sollte mindestens 2 Zeichen lang sein</string>
+    <!-- errors -->
+    <!-- generic terms -->
+    <string name="notes">Notizen</string>
+    <string name="topics">Themen</string>
+    <string name="topic">Thema</string>
+    <string name="settings">Einstellungen</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="app">App</string>
+    <string name="generic_img_copy">bild</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="update">Aktualisieren</string>
+    <string name="add">Hinzufügen</string>
+    <string name="new_text">Neu</string>
+    <string name="error">fehler</string>
+    <string name="ok">OK</string>
+    <string name="proceed">Fortfahren</string>
+    <string name="theme">Thema</string>
+    <string name="language">Sprache</string>
+    <string name="active">Aktiv</string>
+    <string name="delete">Löschen</string>
+    <string name="accounts">Konten</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="remove">Löschen</string>
+    <string name="name">Name</string>
+    <string name="about">Über</string>
+    <string name="website">Webseite</string>
+    <string name="system">System</string>
+    <string name="search">Suchen</string>
+    <string name="display">Anzeigen</string>
+    <string name="translation">Übersetzung</string>
+    <string name="security">Sicherheit</string>
+    <string name="version">Version</string>
+    <string name="links">Links</string>
+    <string name="close">Schließen</string>
+    <string name="description">Beschreibung</string>
+    <string name="create">Erstellen</string>
+    <string name="database">Datenbank</string>
+    <string name="title">Titel (Pflichtfeld)</string>
+    <string name="general">Standard</string>
+    <!-- generic terms -->
+</resources>

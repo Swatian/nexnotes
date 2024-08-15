@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_biometric_header">Verrouillage biométrique</string>
+    <string name="created_with">Créé %s</string>
+    <string name="updated_with">Mis à jour %s</string>
+    <string name="nothing_found">Ajouter une Note</string>
+    <string name="delete_note_dialog_message">Voulez-vous vraiment supprimer cette note ?</string>
+    <plurals name="note_delete_message">
+        <item quantity="one">Note supprimée avec succès</item>
+        <item quantity="other">Notes supprimées avec succès</item>
+    </plurals>
+    <string name="all_good">Vous êtes à jour</string>
+    <string name="delete_notes">Supprimer toutes les notes</string>
+    <string name="note_content_hint">Commencez à prendre vos notes ici…</string>
+    <string name="delete_all_notes_dialog_message">Cela supprimera toutes vos notes. Cette action est irréversible.</string>
+    <string name="delete_topic_dialog_message">Vous êtes sur le point de supprimer un sujet. Appuyez sur Supprimer pour continuer.</string>
+    <string name="delete_topic_message">Sujet supprimé avec succès</string>
+    <string name="topic_created">Sujet créé</string>
+    <string name="biometric_auth_title">Authentification biométrique</string>
+    <string name="biometric_auth_sub_title">Déverrouillez avec vos identifiants biométriques</string>
+    <string name="settings_saved">Paramètres enregistrés</string>
+    <string name="enroll_biometric">Enrôlez la biométrie dans les paramètres du téléphone</string>
+    <string name="biometric_not_supported">Aucune fonctionnalité biométrique disponible sur cet appareil</string>
+    <string name="biometric_not_available">Les fonctionnalités biométriques ne sont actuellement pas disponibles</string>
+    <string name="settings_language_selector_dialog_title">Choisir la langue</string>
+    <string name="source_code">Code source</string>
+    <!-- errors -->
+    <string name="generic_error">Quelque chose a mal tourné</string>
+    <string name="browser_open_failed">Aucune application trouvée pour ouvrir ce lien</string>
+    <string name="topic_exists">Le sujet existe déjà</string>
+    <string name="topic_min_characters">Le sujet doit comporter au moins 2 caractères</string>
+    <!-- errors -->
+    <!-- generic terms -->
+    <string name="notes">Notes</string>
+    <string name="topics">Sujets</string>
+    <string name="topic">Sujet</string>
+    <string name="settings">Paramètres</string>
+    <string name="notifications">Notifications</string>
+    <string name="app">Application</string>
+    <string name="generic_img_copy">image</string>
+    <string name="cancel">Annuler</string>
+    <string name="update">Mettre à jour</string>
+    <string name="add">Ajouter</string>
+    <string name="new_text">Nouveau</string>
+    <string name="error">erreur</string>
+    <string name="ok">OK</string>
+    <string name="proceed">Continuer</string>
+    <string name="theme">Thème</string>
+    <string name="language">Langue</string>
+    <string name="active">Actif</string>
+    <string name="delete">Supprimer</string>
+    <string name="accounts">Comptes</string>
+    <string name="edit">Modifier</string>
+    <string name="remove">Retirer</string>
+    <string name="name">Nom</string>
+    <string name="about">À propos</string>
+    <string name="website">Site-Web</string>
+    <string name="system">Système</string>
+    <string name="search">Recherche</string>
+    <string name="display">Affichage</string>
+    <string name="translation">Traduction</string>
+    <string name="security">Sécurité</string>
+    <string name="version">Version</string>
+    <string name="links">Liens</string>
+    <string name="close">Fermer</string>
+    <string name="description">Description</string>
+    <string name="create">Créer</string>
+    <string name="database">Base de données</string>
+    <string name="title">Titre (obligatoire)</string>
+    <string name="general">Général</string>
+    <!-- generic terms -->
+</resources>

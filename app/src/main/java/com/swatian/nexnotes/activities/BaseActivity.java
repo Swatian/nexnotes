@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.swatian.nexnotes.helpers.AppSettingsInit;
 import com.swatian.nexnotes.helpers.Utils;
-import java.util.Locale;
 
 /**
  * @author mmarif
@@ -31,7 +30,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 				AppSettingsInit.getSettingsValue(ctx, AppSettingsInit.APP_LOCALE_KEY).split("\\|");
 
 		if (locale[0].equals("0")) {
-			Utils.setAppLocale(Locale.getDefault().getLanguage());
+			Utils.setAppLocale(
+					ctx.getResources().getConfiguration().getLocales().get(1).getLanguage());
 		} else {
 			Utils.setAppLocale(locale[1]);
 		}

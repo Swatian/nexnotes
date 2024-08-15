@@ -2,5 +2,9 @@
 <resources>
     <string-array name="languages">
         <item>en</item>
+        <item>de</item>
+        <item>ru</item>
+        <item>zh</item>
+        <item>fr</item>
     </string-array>
 </resources>
