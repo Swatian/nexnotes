@@ -27,12 +27,8 @@ public class Utils {
 	public static void setAppLocale(String locCode) {
 
 		String[] multiCodeLang = locCode.split("-");
-		String countryCode;
 		if (locCode.contains("-")) {
 			locCode = multiCodeLang[0];
-			countryCode = multiCodeLang[1];
-		} else {
-			countryCode = "";
 		}
 
 		AppCompatDelegate.setApplicationLocales(

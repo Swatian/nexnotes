@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_biometric_header">生物识别锁</string>
+    <string name="created_with">创建于 %s</string>
+    <string name="updated_with">更新于 %s</string>
+    <string name="nothing_found">这里很安静</string>
+    <string name="delete_note_dialog_message">你确定要删除这条笔记吗？</string>
+    <plurals name="note_delete_message">
+        <item quantity="other">笔记删除成功</item>
+    </plurals>
+    <string name="all_good">你已经完成了所有任务</string>
+    <string name="delete_notes">删除所有笔记</string>
+    <string name="note_content_hint">在这里开始记笔记…</string>
+    <string name="delete_all_notes_dialog_message">这将删除你所有的笔记。此操作无法撤销。</string>
+    <string name="delete_topic_dialog_message">你即将删除一个主题。按“删除”继续。</string>
+    <string name="delete_topic_message">主题删除成功</string>
+    <string name="topic_created">主题已创建</string>
+    <string name="biometric_auth_title">生物识别认证</string>
+    <string name="biometric_auth_sub_title">使用您的生物识别凭证解锁</string>
+    <string name="settings_saved">设置已保存</string>
+    <string name="enroll_biometric">从手机设置中注册生物识别</string>
+    <string name="biometric_not_supported">此设备不支持生物识别功能</string>
+    <string name="biometric_not_available">生物识别功能当前不可用</string>
+    <string name="settings_language_selector_dialog_title">选择语言</string>
+    <string name="source_code">源代码</string>
+    <!-- errors -->
+    <string name="generic_error">出现问题</string>
+    <string name="browser_open_failed">找不到应用程序打开此链接</string>
+    <string name="topic_exists">主题已存在</string>
+    <string name="topic_min_characters">主题至少应包含2个字符</string>
+    <!-- errors -->
+    <!-- generic terms -->
+    <string name="notes">笔记</string>
+    <string name="topics">主题</string>
+    <string name="topic">主题</string>
+    <string name="settings">设置</string>
+    <string name="notifications">通知</string>
+    <string name="app">应用程序</string>
+    <string name="generic_img_copy">图像</string>
+    <string name="cancel">取消</string>
+    <string name="update">更新</string>
+    <string name="add">添加</string>
+    <string name="new_text">新</string>
+    <string name="error">错误</string>
+    <string name="ok">确定</string>
+    <string name="proceed">继续</string>
+    <string name="theme">主题</string>
+    <string name="language">语言</string>
+    <string name="active">激活</string>
+    <string name="delete">删除</string>
+    <string name="accounts">账户</string>
+    <string name="edit">编辑</string>
+    <string name="remove">移除</string>
+    <string name="name">名称</string>
+    <string name="about">关于</string>
+    <string name="website">网站</string>
+    <string name="system">系统</string>
+    <string name="search">搜索</string>
+    <string name="display">显示</string>
+    <string name="translation">翻译</string>
+    <string name="security">安全</string>
+    <string name="version">版本</string>
+    <string name="links">链接</string>
+    <string name="close">关闭</string>
+    <string name="description">描述</string>
+    <string name="create">创建</string>
+    <string name="database">数据库</string>
+    <string name="title">标题（必填）</string>
+    <string name="general">常规</string>
+    <!-- generic terms -->
+</resources>
