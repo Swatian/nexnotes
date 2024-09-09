@@ -1,0 +1,6 @@
+1.5
+
+- New languages with translation updates
+- Other fixes
+
+https://github.com/Swatian/nexnotes/releases
