@@ -31,7 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
 		if (locale[0].equals("0")) {
 			Utils.setAppLocale(
-					ctx.getResources().getConfiguration().getLocales().get(1).getLanguage());
+					ctx.getResources().getConfiguration().getLocales().get(0).getLanguage());
 		} else {
 			Utils.setAppLocale(locale[1]);
 		}
