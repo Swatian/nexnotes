@@ -1,7 +1,7 @@
 [![License: GPL v3](https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/license.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Release](https://img.shields.io/github/v/release/Swatian/nexnotes?display_name=release&label=release
 )](https://github.com/Swatian/nexnotes/releases) [![Crowdin](https://badges.crowdin.net/nexnotes/localized.svg)](https://crowdin.com/project/nexnotes)
 
-[<img alt="Become a Patreon" src="https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/patreon.png" height="40"/>](https://www.patreon.com/mmarif) [<img alt="Buy me a coffee" src="https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/buy-me-a-coffee.png" height="40"/>](https://www.buymeacoffee.com/mmarif)
+[<img alt="Become a Patreon" src="https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/patreon.png" height="80"/>](https://www.patreon.com/mmarif)
 
 # Nex Notes - Android app for taking notes
 
@@ -13,6 +13,7 @@ Nex Notes is licensed under the GPLv3 License. Please refer to the LICENSE file 
 [<img alt='Get it on F-Droid' src='https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/fdroid.png' height="80"/>](https://f-droid.org/packages/com.swatian.nexnotes/)
 [<img alt='Get it on Google Play' src='https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/google-play.png' height="80"/>](https://play.google.com/store/apps/details?id=com.swatian.nexnotes.premium)
 [<img alt='Download builds and releases' src='https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/apk-badge.png' height="82"/>](https://github.com/Swatian/nexnotes/releases)
+[<img alt='Get it on OpenAPK' src='https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/openapk.png' height="82"/>](https://www.openapk.net/nex-notes-for-taking-quick-notes/com.swatian.nexnotes/)
 
 ## Features
 
