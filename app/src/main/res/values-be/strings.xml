@@ -1,0 +1,75 @@
+<resources>
+    <string name="settings_biometric_header">Біяметрычны замок</string>
+    <string name="created_with">Стварылі %s</string>
+    <string name="updated_with">Абноўлены %s</string>
+    <string name="nothing_found">Ціха тут</string>
+    <string name="delete_note_dialog_message">Вы сапраўды хочаце выдаліць гэтую нататку?</string>
+    <plurals name="note_delete_message">
+        <item quantity="one">Нататка паспяхова выдалена</item>
+        <item quantity="other">Нататкі паспяхова выдалены</item>
+    </plurals>
+    <string name="all_good">Вы ўсё зрабілі</string>
+    <string name="delete_notes">Выдаліць усе нататкі</string>
+    <string name="note_content_hint">Пачніце рабіць нататкі тут...</string>
+    <string name="delete_all_notes_dialog_message">Гэта выдаліць усе вашы нататкі. Гэта дзеянне нельга адмяніць.</string>
+    <string name="delete_topic_dialog_message">Вы збіраецеся выдаліць тэму. Націсніце \"Выдаліць\", каб працягнуць.</string>
+    <string name="delete_topic_message">Тэма паспяхова выдалена</string>
+    <string name="topic_created">Тэма створана</string>
+    <string name="biometric_auth_title">Біяметрычная аўтэнтыфікацыя</string>
+    <string name="biometric_auth_sub_title">Разблакіраваць з дапамогай біяметрычных уліковых дадзеных</string>
+    <string name="settings_saved">Налады захаваны</string>
+    <string name="enroll_biometric">Зарэгістраваць біяметрыю з налад тэлефона</string>
+    <string name="biometric_not_supported">На гэтай прыладзе няма біяметрычных функцый</string>
+    <string name="biometric_not_available">Біяметрычныя функцыі зараз недаступныя</string>
+    <string name="settings_language_selector_dialog_title">Выберыце мову</string>
+    <string name="source_code">Зыходны код</string>
+
+    <!-- errors -->
+    <string name="generic_error">Нешта пайшло не так</string>
+    <string name="browser_open_failed">Не знойдзена праграма для адкрыцця гэтай спасылкі</string>
+    <string name="topic_exists">Тэма ўжо існуе</string>
+    <string name="topic_min_characters">Тэма павінна быць не менш за 2 сімвалы</string>
+    <!-- errors -->
+
+    <!-- generic terms -->
+    <string name="notes">Нататкі</string>
+    <string name="topics">Тэмы</string>
+    <string name="topic">Тэма</string>
+    <string name="settings">Налады</string>
+    <string name="notifications">Апавяшчэнні</string>
+    <string name="app">Прыкладанне</string>
+    <string name="generic_img_copy">малюнак</string>
+    <string name="cancel">Адмяніць</string>
+    <string name="update">Абнаўленне</string>
+    <string name="add">Дадаць</string>
+    <string name="new_text">Новая</string>
+    <string name="error">памылка</string>
+    <string name="ok">Добра</string>
+    <string name="proceed">Працягвайце</string>
+    <string name="theme">Тэма</string>
+    <string name="language">Мова</string>
+    <string name="active">Актыўны</string>
+    <string name="delete">Выдаліць</string>
+    <string name="accounts">Колькасць</string>
+    <string name="edit">Правіць</string>
+    <string name="remove">Выдаліць</string>
+    <string name="name">Імя</string>
+    <string name="about">Аб</string>
+    <string name="website">Сайт</string>
+    <string name="system">Сістэма</string>
+    <string name="search">Пошук</string>
+    <string name="display">Адлюстраванне</string>
+    <string name="appearance">Знешні выгляд</string>
+    <string name="translation">Пераклад</string>
+    <string name="security">Бяспека</string>
+    <string name="version">Версія</string>
+    <string name="links">Спасылкі</string>
+    <string name="close">Зачыніць</string>
+    <string name="description">Апісанне</string>
+    <string name="create">Ствараць</string>
+    <string name="database">База дадзеных</string>
+    <string name="title">Назва (абавязкова)</string>
+    <string name="general">General</string>
+    <string name="save">Захаваць</string>
+    <!-- generic terms -->
+</resources>
