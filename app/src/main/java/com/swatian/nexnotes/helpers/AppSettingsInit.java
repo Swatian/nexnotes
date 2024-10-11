@@ -11,7 +11,7 @@ import com.swatian.nexnotes.datastore.models.AppSettings;
 public class AppSettingsInit {
 
 	public static String APP_LOCALE_KEY = "app_locale";
-	public static String APP_LOCALE_KEY_DEFAULT = "0|sys";
+	public static String APP_LOCALE_KEY_DEFAULT = "1|en";
 	public static String APP_BIOMETRIC_KEY = "app_biometric";
 	public static String APP_BIOMETRIC_DEFAULT = "false";
 	public static String APP_BIOMETRIC_LIFE_CYCLE_KEY = "app_biometric_life_cycle";

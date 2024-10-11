@@ -8,11 +8,11 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.view.View;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.pm.PackageInfoCompat;
-import androidx.core.os.LocaleListCompat;
 import com.swatian.nexnotes.R;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,15 +24,16 @@ import java.util.Objects;
  */
 public class Utils {
 
-	public static void setAppLocale(String locCode) {
+	public static Context setLocale(Context context, String languageCode) {
 
-		String[] multiCodeLang = locCode.split("-");
-		if (locCode.contains("-")) {
-			locCode = multiCodeLang[0];
-		}
+		Locale locale = new Locale(languageCode);
+		Locale.setDefault(locale);
 
-		AppCompatDelegate.setApplicationLocales(
-				LocaleListCompat.create(Locale.forLanguageTag(locCode)));
+		Resources resources = context.getResources();
+		Configuration config = resources.getConfiguration();
+
+		config.setLocale(locale);
+		return context.createConfigurationContext(config);
 	}
 
 	public static int getAppBuildNo(Context context) {
