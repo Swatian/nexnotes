@@ -60,6 +60,7 @@
     <string name="system">Системный</string>
     <string name="search">Поиск</string>
     <string name="display">Отобразить</string>
+    <string name="appearance">Внешний вид</string>
     <string name="translation">Перевод</string>
     <string name="security">Охрана</string>
     <string name="version">Версия</string>
@@ -70,5 +71,6 @@
     <string name="database">База данных</string>
     <string name="title">Заголовок (обязательно)</string>
     <string name="general">В целом</string>
+    <string name="save">Сохранить</string>
     <!-- generic terms -->
 </resources>

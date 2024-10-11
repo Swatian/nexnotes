@@ -1,0 +1,6 @@
+1.7
+
+- Add new languages and translation updates
+- Fix switching languages in Android 12 and below
+
+https://github.com/Swatian/nexnotes/releases

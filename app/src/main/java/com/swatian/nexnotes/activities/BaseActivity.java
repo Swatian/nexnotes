@@ -26,15 +26,25 @@ public abstract class BaseActivity extends AppCompatActivity {
 		AppSettingsInit.updateSettingsValue(
 				getApplicationContext(), "false", AppSettingsInit.APP_BIOMETRIC_LIFE_CYCLE_KEY);
 
-		String[] locale =
-				AppSettingsInit.getSettingsValue(ctx, AppSettingsInit.APP_LOCALE_KEY).split("\\|");
+		applyLocale();
+	}
 
-		if (locale[0].equals("0")) {
-			Utils.setAppLocale(
-					ctx.getResources().getConfiguration().getLocales().get(0).getLanguage());
-		} else {
-			Utils.setAppLocale(locale[1]);
-		}
+	private void applyLocale() {
+
+		String savedLocale =
+				getSharedPreferences("nexnotes_preferences", MODE_PRIVATE)
+						.getString("app_locale", "en");
+		Utils.setLocale(this, savedLocale);
+	}
+
+	@Override
+	protected void attachBaseContext(Context base) {
+		super.attachBaseContext(Utils.setLocale(base, getCurrentLocaleFromPreferences(base)));
+	}
+
+	private String getCurrentLocaleFromPreferences(Context context) {
+		return context.getSharedPreferences("nexnotes_preferences", MODE_PRIVATE)
+				.getString("app_locale", "en");
 	}
 
 	public void onResume() {

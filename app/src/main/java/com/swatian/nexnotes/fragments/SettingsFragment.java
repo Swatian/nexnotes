@@ -1,10 +1,12 @@
 package com.swatian.nexnotes.fragments;
 
+import static android.content.Context.MODE_PRIVATE;
 import static androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG;
 import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL;
 
 import android.app.KeyguardManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -110,12 +112,33 @@ public class SettingsFragment extends Fragment {
 														i + "|" + selectedLanguage,
 														AppSettingsInit.APP_LOCALE_KEY);
 
+												/*if (selectedLanguage.equalsIgnoreCase("sys")) {
+													selectedLanguage =
+															requireContext()
+																	.getResources()
+																	.getConfiguration()
+																	.getLocales()
+																	.get(0)
+																	.getLanguage();
+												}*/
+
+												String[] multiCodeLang =
+														selectedLanguage.split("-");
+												if (selectedLanguage.contains("-")) {
+													selectedLanguage = multiCodeLang[0];
+												}
+
+												SharedPreferences prefs =
+														requireContext()
+																.getSharedPreferences(
+																		"nexnotes_preferences",
+																		MODE_PRIVATE);
+												prefs.edit()
+														.putString("app_locale", selectedLanguage)
+														.apply();
+
+												Utils.setLocale(requireContext(), selectedLanguage);
 												dialogInterface.dismiss();
-												Snackbar.info(
-														requireActivity(),
-														requireActivity()
-																.findViewById(R.id.nav_view),
-														getString(R.string.settings_saved));
 												requireActivity().recreate();
 											});
 
