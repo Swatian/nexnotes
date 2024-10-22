@@ -51,13 +51,6 @@ public class SettingsFragment extends Fragment {
 								requireActivity(),
 								requireActivity().findViewById(R.id.nav_view),
 								getResources().getString(R.string.link_patreon)));
-		binding.supportBmcFrame.setOnClickListener(
-				v12 ->
-						Utils.openUrlInBrowser(
-								requireContext(),
-								requireActivity(),
-								requireActivity().findViewById(R.id.nav_view),
-								getResources().getString(R.string.link_buy_me_a_coffee)));
 		binding.crowdinFrame.setOnClickListener(
 				v13 ->
 						Utils.openUrlInBrowser(

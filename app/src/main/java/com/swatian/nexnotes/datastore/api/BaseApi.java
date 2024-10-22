@@ -22,6 +22,7 @@ public abstract class BaseApi {
 		nexNotesDatabase = NexNotesDatabase.getDatabaseInstance(context);
 	}
 
+	@SuppressWarnings("unchecked")
 	public static <T extends BaseApi> T getInstance(
 			@NonNull Context context, @NonNull Class<T> clazz) {
 

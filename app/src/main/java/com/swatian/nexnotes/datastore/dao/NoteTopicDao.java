@@ -5,7 +5,6 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 import com.swatian.nexnotes.datastore.models.NoteTopics;
-import com.swatian.nexnotes.datastore.models.Topics;
 import java.util.List;
 
 /**
@@ -16,9 +15,6 @@ public interface NoteTopicDao {
 
 	@Insert
 	long insertNoteTopic(NoteTopics noteTopics);
-
-	@Query("SELECT * FROM NoteTopics WHERE ntId = :ntId")
-	Topics fetchNoteTopicById(int ntId);
 
 	@Query("SELECT * FROM NoteTopics WHERE noteId = :noteId")
 	NoteTopics fetchNoteTopicByNoteId(int noteId);
