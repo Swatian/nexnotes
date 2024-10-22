@@ -14,6 +14,7 @@ import com.swatian.nexnotes.interfaces.BottomSheetListener;
 public class MainActivity extends BaseActivity implements BottomSheetListener {
 
 	private ActivityMainBinding binding;
+	public static boolean closeActivity = false;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -33,4 +34,14 @@ public class MainActivity extends BaseActivity implements BottomSheetListener {
 
 	@Override
 	public void onClickedAction(String text) {}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+
+		if (closeActivity) {
+			finishAndRemoveTask();
+			closeActivity = false;
+		}
+	}
 }
