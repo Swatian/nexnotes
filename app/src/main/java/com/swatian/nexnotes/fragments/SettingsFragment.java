@@ -51,13 +51,6 @@ public class SettingsFragment extends Fragment {
 								requireActivity(),
 								requireActivity().findViewById(R.id.nav_view),
 								getResources().getString(R.string.link_patreon)));
-		binding.supportBmcFrame.setOnClickListener(
-				v12 ->
-						Utils.openUrlInBrowser(
-								requireContext(),
-								requireActivity(),
-								requireActivity().findViewById(R.id.nav_view),
-								getResources().getString(R.string.link_buy_me_a_coffee)));
 		binding.crowdinFrame.setOnClickListener(
 				v13 ->
 						Utils.openUrlInBrowser(
@@ -145,6 +138,33 @@ public class SettingsFragment extends Fragment {
 					materialAlertDialogBuilder.create().show();
 				});
 		// language selection dialog
+
+		// Markdown mode switcher
+		binding.switchMdMode.setChecked(
+				Boolean.parseBoolean(
+						AppSettingsInit.getSettingsValue(
+								requireContext(), AppSettingsInit.APP_MD_MODE_KEY)));
+
+		binding.switchMdMode.setOnCheckedChangeListener(
+				(buttonView, isChecked) -> {
+					if (isChecked) {
+
+						AppSettingsInit.updateSettingsValue(
+								requireContext(), "true", AppSettingsInit.APP_MD_MODE_KEY);
+					} else {
+
+						AppSettingsInit.updateSettingsValue(
+								requireContext(), "false", AppSettingsInit.APP_MD_MODE_KEY);
+						Snackbar.info(
+								requireActivity(),
+								requireActivity().findViewById(R.id.nav_view),
+								getString(R.string.settings_saved));
+					}
+				});
+
+		binding.mdModeFrame.setOnClickListener(
+				v -> binding.switchMdMode.setChecked(!binding.switchMdMode.isChecked()));
+		// Markdown mode switcher
 
 		// biometric switcher
 		binding.switchBiometric.setChecked(

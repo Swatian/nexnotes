@@ -26,6 +26,7 @@
     <string name="biometric_not_available">Биометрические функции пока недоступны</string>
     <string name="settings_language_selector_dialog_title">Выбор языка</string>
     <string name="source_code">Исходный код</string>
+    <string name="md_mode_header">Markdown mode</string>
     <!-- errors -->
     <string name="generic_error">Что-то пошло не так</string>
     <string name="browser_open_failed">Не найдено приложение для открытия этой ссылки</string>

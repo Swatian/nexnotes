@@ -1,6 +1,5 @@
 package com.swatian.nexnotes.activities;
 
-import android.content.Context;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +14,6 @@ import java.util.concurrent.Executor;
  * @author mmarif
  */
 public class BiometricLockActivity extends AppCompatActivity {
-
-	protected Context ctx = this;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -45,7 +42,7 @@ public class BiometricLockActivity extends AppCompatActivity {
 
 								super.onAuthenticationError(errorCode, errString);
 
-								// Authentication error, close the app
+								MainActivity.closeActivity = true;
 								finish();
 							}
 

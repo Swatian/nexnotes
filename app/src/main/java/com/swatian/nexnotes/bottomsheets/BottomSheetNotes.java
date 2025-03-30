@@ -25,6 +25,7 @@ import com.swatian.nexnotes.datastore.api.NotesApi;
 import com.swatian.nexnotes.datastore.api.TopicsApi;
 import com.swatian.nexnotes.datastore.models.Notes;
 import com.swatian.nexnotes.datastore.models.Topics;
+import com.swatian.nexnotes.helpers.AppSettingsInit;
 import com.swatian.nexnotes.helpers.Markdown;
 import com.swatian.nexnotes.interfaces.BottomSheetListener;
 import com.vdurmont.emoji.EmojiParser;
@@ -147,6 +148,24 @@ public class BottomSheetNotes extends BottomSheetDialogFragment {
 
 			bottomSheetNotesBinding.title.addTextChangedListener(textWatcher);
 			bottomSheetNotesBinding.contents.addTextChangedListener(textWatcher);
+
+			// check for md mode
+			if (!Boolean.parseBoolean(
+					AppSettingsInit.getSettingsValue(
+							requireContext(), AppSettingsInit.APP_MD_MODE_KEY))) {
+				bottomSheetNotesBinding.contents.setVisibility(View.GONE);
+				bottomSheetNotesBinding.renderContents.setVisibility(View.VISIBLE);
+
+				bottomSheetNotesBinding.edit.setVisibility(View.VISIBLE);
+				bottomSheetNotesBinding.view.setVisibility(View.GONE);
+
+				Markdown.render(
+						requireContext(),
+						EmojiParser.parseToUnicode(
+								bottomSheetNotesBinding.contents.getText().toString()),
+						bottomSheetNotesBinding.renderContents);
+			}
+
 		} else if (source.equalsIgnoreCase("new")) {
 
 			bottomSheetNotesBinding.topicsDropdownLayout.setVisibility(View.GONE);

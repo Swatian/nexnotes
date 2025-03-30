@@ -24,6 +24,7 @@
     <string name="biometric_not_available">Biometrische Features sind im Moment nicht vorhanden</string>
     <string name="settings_language_selector_dialog_title">Sprache auswählen</string>
     <string name="source_code">Quellcode</string>
+    <string name="md_mode_header">Markdown mode</string>
     <!-- errors -->
     <string name="generic_error">Etwas ist schiefgelaufen</string>
     <string name="browser_open_failed">Keine Anwendung gefunden, um diesen Link zu öffnen</string>
@@ -55,9 +56,10 @@
     <string name="name">Name</string>
     <string name="about">Über</string>
     <string name="website">Webseite</string>
-    <string name="system">System</string>
+    <string name="system">Syste</string>
     <string name="search">Suchen</string>
     <string name="display">Anzeigen</string>
+    <string name="appearance">Aussehen</string>
     <string name="translation">Übersetzung</string>
     <string name="security">Sicherheit</string>
     <string name="version">Version</string>
@@ -68,5 +70,6 @@
     <string name="database">Datenbank</string>
     <string name="title">Titel (Pflichtfeld)</string>
     <string name="general">Standard</string>
+    <string name="save">Speichern</string>
     <!-- generic terms -->
 </resources>

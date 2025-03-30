@@ -2,12 +2,9 @@
     <string name="app_name" translatable="false">Nex Notes</string>
     <string name="patreon" translatable="false">Patreon</string>
     <string name="link_patreon" translatable="false">https://www.patreon.com/mmarif</string>
-    <string name="buy_me_a_coffee" translatable="false">Buy Me a Coffee</string>
-    <string name="link_buy_me_a_coffee" translatable="false">https://www.buymeacoffee.com/mmarif</string>
     <string name="app_website_link" translatable="false">https://nexnotes.swatian.com</string>
     <string name="zero" translatable="false">0</string>
     <string name="support_text_patreon" translatable="false">Patreon</string>
-    <string name="support_text_buy_me_a_coffee" translatable="false">Buy Me a Coffee</string>
     <string name="crowd_in_text" translatable="false">Crowdin</string>
     <string name="crowd_in_link" translatable="false">https://crowdin.com/project/nexnotes</string>
     <string name="source_code_link" translatable="false">https://github.com/Swatian/nexnotes</string>
@@ -36,6 +33,7 @@
     <string name="biometric_not_available">Biometric features are currently unavailable</string>
     <string name="settings_language_selector_dialog_title">Choose language</string>
     <string name="source_code">Source code</string>
+    <string name="md_mode_header">Markdown mode</string>
 
     <!-- errors -->
     <string name="generic_error">Something went wrong</string>
