@@ -1,0 +1,7 @@
+1.8
+
+- [New] Add option to enable/disable markdown mode (settings)
+- [Fix] Fix bio-metric reappear after cancel
+- [Update] Translation updates
+
+https://github.com/Swatian/nexnotes/releases
