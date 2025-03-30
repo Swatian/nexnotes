@@ -5,6 +5,8 @@
 
 # Nex Notes - Android app for taking notes
 
+![Nex Notes](https://github.com/Swatian/nexnotes/blob/main/assets/logo.png)
+
 Nex Notes is a simple, free and open-source Android app for taking quick and beautiful notes.
 Nex Notes is licensed under the GPLv3 License. Please refer to the LICENSE file for the full text of the license.
 
