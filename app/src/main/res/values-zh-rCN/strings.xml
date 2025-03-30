@@ -23,6 +23,7 @@
     <string name="biometric_not_available">生物识别功能当前不可用</string>
     <string name="settings_language_selector_dialog_title">选择语言</string>
     <string name="source_code">源代码</string>
+    <string name="md_mode_header">Markdown mode</string>
     <!-- errors -->
     <string name="generic_error">出现问题</string>
     <string name="browser_open_failed">找不到应用程序打开此链接</string>
@@ -57,6 +58,7 @@
     <string name="system">系统</string>
     <string name="search">搜索</string>
     <string name="display">显示</string>
+    <string name="appearance">Appearance</string>
     <string name="translation">翻译</string>
     <string name="security">安全</string>
     <string name="version">版本</string>
@@ -67,5 +69,6 @@
     <string name="database">数据库</string>
     <string name="title">标题（必填）</string>
     <string name="general">常规</string>
+    <string name="save">Save</string>
     <!-- generic terms -->
 </resources>

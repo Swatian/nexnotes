@@ -62,6 +62,10 @@ Thanks to all the open source libraries, contributors, and donors.
 
 - [tabler/tabler-icons](https://github.com/tabler/tabler-icons)
 
+## Social
+
 [Follow me on Fediverse - mastodon.social/@mmarif](https://mastodon.social/@mmarif)
+
+[Follow me on Bluesky - mmarif.bsky.social](https://bsky.app/profile/mmarif.bsky.social)
 
 *All trademarks and logos are the properties of their respective owners.*

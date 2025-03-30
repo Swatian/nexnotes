@@ -16,6 +16,8 @@ public class AppSettingsInit {
 	public static String APP_BIOMETRIC_DEFAULT = "false";
 	public static String APP_BIOMETRIC_LIFE_CYCLE_KEY = "app_biometric_life_cycle";
 	public static String APP_BIOMETRIC_LIFE_CYCLE_DEFAULT = "false";
+	public static String APP_MD_MODE_KEY = "app_default_md_mode";
+	public static String APP_MD_MODE_DEFAULT = "true";
 
 	public static void initDefaultSettings(Context ctx) {
 
@@ -36,6 +38,11 @@ public class AppSettingsInit {
 					APP_BIOMETRIC_LIFE_CYCLE_KEY,
 					APP_BIOMETRIC_LIFE_CYCLE_DEFAULT,
 					APP_BIOMETRIC_LIFE_CYCLE_DEFAULT);
+		}
+
+		if (appSettingsApi.fetchSettingCountByKey(APP_MD_MODE_KEY) == 0) {
+			appSettingsApi.insertNewSetting(
+					APP_MD_MODE_KEY, APP_MD_MODE_DEFAULT, APP_MD_MODE_DEFAULT);
 		}
 	}
 

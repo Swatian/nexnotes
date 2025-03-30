@@ -33,6 +33,7 @@
     <string name="biometric_not_available">Biometric features are currently unavailable</string>
     <string name="settings_language_selector_dialog_title">Choose language</string>
     <string name="source_code">Source code</string>
+    <string name="md_mode_header">Markdown mode</string>
 
     <!-- errors -->
     <string name="generic_error">Something went wrong</string>

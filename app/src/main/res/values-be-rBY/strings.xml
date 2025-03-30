@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="settings_biometric_header">Біяметрычны замок</string>
     <string name="created_with">Стварылі %s</string>
     <string name="updated_with">Абноўлены %s</string>
     <string name="nothing_found">Нічога не знойдзена</string>
     <string name="delete_note_dialog_message">Вы сапраўды хочаце выдаліць гэтую нататку?</string>
     <plurals name="note_delete_message">
-        <item quantity="one" tools:ignore="ImpliedQuantity">Нататка паспяхова выдалена</item>
+        <item quantity="one">Нататка паспяхова выдалена</item>
         <item quantity="few">Нататкі паспяхова выдалены</item>
         <item quantity="many">Нататкі паспяхова выдалены</item>
         <item quantity="other">Нататкі паспяхова выдалены</item>
     </plurals>
     <string name="all_good">Вы ўсё зрабілі</string>
     <string name="delete_notes">Выдаліць усе нататкі</string>
-    <string name="note_content_hint">Пачніце рабіць нататкі тут…</string>
+    <string name="note_content_hint">Пачніце рабіць нататкі тут...</string>
     <string name="delete_all_notes_dialog_message">Гэта выдаліць усе вашы нататкі. Гэта дзеянне нельга адмяніць.</string>
     <string name="delete_topic_dialog_message">Вы збіраецеся выдаліць тэму. Націсніце \"Выдаліць\", каб працягнуць.</string>
     <string name="delete_topic_message">Тэма паспяхова выдалена</string>
@@ -26,6 +26,7 @@
     <string name="biometric_not_available">Біяметрычныя функцыі зараз недаступныя</string>
     <string name="settings_language_selector_dialog_title">Выберыце мову</string>
     <string name="source_code">Зыходны код</string>
+    <string name="md_mode_header">Markdown mode</string>
     <!-- errors -->
     <string name="generic_error">Нешта пайшло не так</string>
     <string name="browser_open_failed">Не знойдзена праграма для адкрыцця гэтай спасылкі</string>
