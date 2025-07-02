@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
 
         <item name="iconsColor">@color/white</item>
-        <item name="android:navigationBarColor">#211B2A</item>
+        <item name="android:navigationBarColor">#231D28</item>
         <item name="snackbarContainer">@color/snackbar_container</item>
         <item name="snackbarOnContainer">@color/white</item>
         <item name="divider">@color/divider_background_dark</item>

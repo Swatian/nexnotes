@@ -40,6 +40,12 @@ public interface NotesDao {
 	LiveData<List<Notes>> searchNotes(String content);
 
 	@Query(
-			"SELECT n.* FROM Notes as n JOIN NoteTopics as nt ON nt.noteId = n.noteId JOIN Topics as t ON t.topicId = nt.topicId WHERE n.title LIKE '%' || :content || '%' OR n.content LIKE '%' || :content || '%' OR t.topic LIKE '%' || :content || '%' ORDER BY n.modified DESC, n.noteId DESC")
+			"SELECT n.* FROM Notes AS n "
+					+ "LEFT JOIN NoteTopics AS nt ON nt.noteId = n.noteId "
+					+ "LEFT JOIN Topics AS t ON t.topicId = nt.topicId "
+					+ "WHERE n.title LIKE '%' || :content || '%' "
+					+ "OR n.content LIKE '%' || :content || '%' "
+					+ "OR t.topic LIKE '%' || :content || '%' "
+					+ "ORDER BY n.modified DESC, n.noteId DESC")
 	LiveData<List<Notes>> extendedSearchedNotes(String content);
 }
