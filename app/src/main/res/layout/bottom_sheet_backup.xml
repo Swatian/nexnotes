@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/backup_and_restore"
+        android:textSize="@dimen/dimen18sp"
+        android:paddingTop="@dimen/dimen16dp"
+        android:paddingBottom="@dimen/dimen8dp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/title_underline"
+        android:layout_width="@dimen/dimen48dp"
+        android:layout_height="@dimen/dimen8dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="@dimen/dimen4dp"
+        android:layout_marginBottom="@dimen/dimen24dp"
+        app:cardElevation="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/export_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen54dp"
+        android:text="@string/export_button"
+        android:layout_marginBottom="@dimen/dimen8dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/import_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen54dp"
+        android:text="@string/import_button"
+        android:layout_marginBottom="@dimen/dimen8dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
+</LinearLayout>

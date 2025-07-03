@@ -4,13 +4,23 @@ import static android.content.Context.MODE_PRIVATE;
 import static androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG;
 import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL;
 
+import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteException;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.ParcelFileDescriptor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.biometric.BiometricManager;
 import androidx.fragment.app.Fragment;
@@ -20,26 +30,87 @@ import com.swatian.nexnotes.databinding.FragmentSettingsBinding;
 import com.swatian.nexnotes.datastore.api.BaseApi;
 import com.swatian.nexnotes.datastore.api.NoteTopicsApi;
 import com.swatian.nexnotes.datastore.api.NotesApi;
+import com.swatian.nexnotes.datastore.db.NexNotesDatabase;
 import com.swatian.nexnotes.helpers.AppSettingsInit;
 import com.swatian.nexnotes.helpers.Snackbar;
 import com.swatian.nexnotes.helpers.Utils;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.channels.FileChannel;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 
 /**
  * @author mmarif
  */
-public class SettingsFragment extends Fragment {
+public class SettingsFragment extends Fragment implements BackupBottomSheet.BackupCallback {
 
 	private FragmentSettingsBinding binding;
 	private NotesApi notesApi;
 	private NoteTopicsApi noteTopicsApi;
 	private static int langSelectedChoice;
+	private ActivityResultLauncher<Intent> importFileLauncher;
+	private ActivityResultLauncher<Intent> exportFileLauncher;
 
 	public View onCreateView(
 			@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 		binding = FragmentSettingsBinding.inflate(inflater, container, false);
+
+		notesApi = BaseApi.getInstance(requireContext(), NotesApi.class);
+		noteTopicsApi = BaseApi.getInstance(requireContext(), NoteTopicsApi.class);
+
+		importFileLauncher =
+				registerForActivityResult(
+						new ActivityResultContracts.StartActivityForResult(),
+						result -> {
+							if (result.getResultCode() == Activity.RESULT_OK
+									&& result.getData() != null) {
+								Uri uri = result.getData().getData();
+								if (uri != null) {
+									confirmImport(uri);
+								} else {
+									Snackbar.info(
+											requireActivity(),
+											requireActivity().findViewById(R.id.nav_view),
+											getString(R.string.import_failed));
+								}
+							} else {
+								Snackbar.info(
+										requireActivity(),
+										requireActivity().findViewById(R.id.nav_view),
+										getString(R.string.import_failed));
+							}
+						});
+
+		exportFileLauncher =
+				registerForActivityResult(
+						new ActivityResultContracts.StartActivityForResult(),
+						result -> {
+							if (result.getResultCode() == Activity.RESULT_OK
+									&& result.getData() != null) {
+								Uri uri = result.getData().getData();
+								if (uri != null) {
+									exportDatabaseToUri(uri);
+								} else {
+									Snackbar.info(
+											requireActivity(),
+											requireActivity().findViewById(R.id.nav_view),
+											getString(R.string.backup_failed));
+								}
+							} else {
+								Snackbar.info(
+										requireActivity(),
+										requireActivity().findViewById(R.id.nav_view),
+										getString(R.string.backup_failed));
+							}
+						});
 
 		// about section
 		binding.appVersion.setText(Utils.getAppVersion(requireContext()));
@@ -257,10 +328,6 @@ public class SettingsFragment extends Fragment {
 		// biometric switcher
 
 		// database - notes
-		notesApi = BaseApi.getInstance(requireContext(), NotesApi.class);
-		noteTopicsApi = BaseApi.getInstance(requireContext(), NoteTopicsApi.class);
-
-		assert notesApi != null;
 		binding.databaseNotesCount.setText(String.valueOf(notesApi.getCount()));
 
 		binding.deleteNotes.setOnClickListener(
@@ -287,7 +354,187 @@ public class SettingsFragment extends Fragment {
 				});
 		// database - notes
 
+		// backup and restore
+		binding.backupRestoreNotesFrame.setOnClickListener(
+				v -> {
+					BackupBottomSheet bottomSheet = BackupBottomSheet.newInstance(this);
+					bottomSheet.show(getParentFragmentManager(), "BackupBottomSheet");
+				});
+		// backup and restore
+
 		return binding.getRoot();
+	}
+
+	@Override
+	public void onExport() {
+		launchExportFilePicker();
+	}
+
+	@Override
+	public void onImport() {
+		launchImportFilePicker();
+	}
+
+	public void launchImportFilePicker() {
+		Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+		intent.addCategory(Intent.CATEGORY_OPENABLE);
+		intent.setType("application/octet-stream");
+		importFileLauncher.launch(intent);
+	}
+
+	public void launchExportFilePicker() {
+		Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+		intent.addCategory(Intent.CATEGORY_OPENABLE);
+		intent.setType("application/octet-stream");
+		String timestamp = new SimpleDateFormat("yyyyMd-HHmmss", Locale.US).format(new Date());
+		intent.putExtra(Intent.EXTRA_TITLE, "NexNotes-" + timestamp + ".backup");
+		exportFileLauncher.launch(intent);
+	}
+
+	public void exportDatabaseToUri(Uri uri) {
+		Thread exportThread =
+				new Thread(
+						() -> {
+							try {
+								NexNotesDatabase db =
+										NexNotesDatabase.getDatabaseInstance(requireContext());
+								db.runInTransaction(() -> notesApi.getCount());
+								db.close();
+
+								boolean isWalEnabled = false;
+								try (Cursor cursor =
+										db.getOpenHelper()
+												.getWritableDatabase()
+												.query("PRAGMA journal_mode", new String[0])) {
+									if (cursor.moveToFirst()) {
+										isWalEnabled = "wal".equalsIgnoreCase(cursor.getString(0));
+									}
+								}
+								if (isWalEnabled) {
+									try (Cursor cursor =
+											db.getOpenHelper()
+													.getWritableDatabase()
+													.query(
+															"PRAGMA wal_checkpoint(FULL)",
+															new String[0])) {
+										cursor.moveToFirst();
+									} catch (SQLiteException ignored) {
+									}
+								}
+
+								File dbFile = requireContext().getDatabasePath("nexnotes");
+								if (!dbFile.exists()) {
+									throw new IOException("Database file does not exist");
+								}
+
+								File tempDir = requireContext().getCacheDir();
+								File tempDbFile = new File(tempDir, "nexnotes_temp");
+								try (FileInputStream fis = new FileInputStream(dbFile);
+										FileOutputStream fos = new FileOutputStream(tempDbFile)) {
+									FileChannel src = fis.getChannel();
+									FileChannel dst = fos.getChannel();
+									dst.transferFrom(src, 0, src.size());
+								}
+
+								try (InputStream inputStream = new FileInputStream(tempDbFile);
+										OutputStream outputStream =
+												requireContext()
+														.getContentResolver()
+														.openOutputStream(uri)) {
+									if (outputStream == null) {
+										throw new IOException(
+												"Failed to open output stream for URI: " + uri);
+									}
+									byte[] buffer = new byte[8192];
+									int bytesRead;
+									while ((bytesRead = inputStream.read(buffer)) != -1) {
+										outputStream.write(buffer, 0, bytesRead);
+									}
+								} finally {
+									if (tempDbFile.exists()) {
+										boolean ignored = tempDbFile.delete();
+									}
+								}
+
+								requireActivity()
+										.runOnUiThread(
+												() -> {
+													Snackbar.info(
+															requireActivity(),
+															requireActivity()
+																	.findViewById(R.id.nav_view),
+															getString(R.string.backup_success));
+													new Handler(Looper.getMainLooper())
+															.postDelayed(this::restartApp, 1500);
+												});
+							} catch (IOException | SQLiteException e) {
+								requireActivity()
+										.runOnUiThread(
+												() ->
+														Snackbar.info(
+																requireActivity(),
+																requireActivity()
+																		.findViewById(
+																				R.id.nav_view),
+																getString(R.string.backup_failed)));
+							}
+						});
+		exportThread.setDaemon(false);
+		exportThread.start();
+	}
+
+	private void confirmImport(Uri uri) {
+		try {
+			File dbFile = requireContext().getDatabasePath("nexnotes");
+
+			NexNotesDatabase db = NexNotesDatabase.getDatabaseInstance(requireContext());
+			if (db.isOpen()) {
+				db.close();
+			}
+			BaseApi.clearInstance();
+
+			try (ParcelFileDescriptor pfd =
+					requireContext().getContentResolver().openFileDescriptor(uri, "r")) {
+				if (pfd == null) {
+					throw new IOException("Failed to open file descriptor for URI: " + uri);
+				}
+				try (FileInputStream fis = new FileInputStream(pfd.getFileDescriptor());
+						FileChannel src = fis.getChannel();
+						FileOutputStream fos = new FileOutputStream(dbFile);
+						FileChannel dst = fos.getChannel()) {
+					dst.transferFrom(src, 0, src.size());
+				}
+			}
+
+			db = NexNotesDatabase.getDatabaseInstance(requireContext());
+			db.getOpenHelper().getWritableDatabase();
+			notesApi = BaseApi.getInstance(requireContext(), NotesApi.class);
+			noteTopicsApi = BaseApi.getInstance(requireContext(), NoteTopicsApi.class);
+
+			Snackbar.info(
+					requireActivity(),
+					requireActivity().findViewById(R.id.nav_view),
+					getString(R.string.import_success));
+			new Handler(Looper.getMainLooper()).postDelayed(this::restartApp, 1500);
+		} catch (IOException | SQLiteException e) {
+			Snackbar.info(
+					requireActivity(),
+					requireActivity().findViewById(R.id.nav_view),
+					getString(R.string.import_failed));
+		}
+	}
+
+	private void restartApp() {
+		Intent intent =
+				requireActivity()
+						.getPackageManager()
+						.getLaunchIntentForPackage(requireActivity().getPackageName());
+		if (intent != null) {
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+			requireActivity().finish();
+			startActivity(intent);
+			Runtime.getRuntime().exit(0);
+		}
 	}
 
 	private static String getLanguageDisplayName(String langCode) {

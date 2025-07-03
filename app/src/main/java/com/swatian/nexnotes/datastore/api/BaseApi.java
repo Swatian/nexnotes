@@ -16,7 +16,7 @@ public abstract class BaseApi {
 
 	protected static final ExecutorService executorService = Executors.newCachedThreadPool();
 	private static final Map<Class<? extends BaseApi>, Object> instances = new HashMap<>();
-	protected final NexNotesDatabase nexNotesDatabase;
+	protected static NexNotesDatabase nexNotesDatabase;
 
 	protected BaseApi(Context context) {
 		nexNotesDatabase = NexNotesDatabase.getDatabaseInstance(context);
@@ -50,5 +50,12 @@ public abstract class BaseApi {
 		}
 
 		return null;
+	}
+
+	public static void clearInstance() {
+		if (nexNotesDatabase != null && nexNotesDatabase.isOpen()) {
+			nexNotesDatabase.close();
+		}
+		nexNotesDatabase = null;
 	}
 }

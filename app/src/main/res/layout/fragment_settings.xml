@@ -286,6 +286,45 @@
 
                 </LinearLayout>
 
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen2dp"
+                    app:dividerColor="?attr/divider"
+                    android:layout_marginTop="@dimen/dimen12dp"
+                    android:layout_marginBottom="@dimen/dimen12dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/backup_restore_notes_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen24dp"
+                        android:layout_height="@dimen/dimen24dp"
+                        android:contentDescription="@string/delete"
+                        android:layout_marginEnd="@dimen/dimen16dp"
+                        app:srcCompat="@drawable/ic_database" />
+
+                    <LinearLayout
+                        android:id="@+id/backup_restore_notes_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/backup_restore_notes_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/backup_and_restore"
+                            android:textSize="@dimen/dimen16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
             <!-- notes info section -->
 
