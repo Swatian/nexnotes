@@ -1,0 +1,9 @@
+1.9
+
+- [New] Import/Export database
+- [Update] Theme improvements
+- [Update] New and updated translations
+- [Update] Support for Android 15/16
+- [Fix] Search results issue fixed
+
+https://github.com/Swatian/nexnotes/releases
