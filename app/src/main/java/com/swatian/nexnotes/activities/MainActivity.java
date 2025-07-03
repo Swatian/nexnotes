@@ -13,14 +13,13 @@ import com.swatian.nexnotes.interfaces.BottomSheetListener;
  */
 public class MainActivity extends BaseActivity implements BottomSheetListener {
 
-	private ActivityMainBinding binding;
 	public static boolean closeActivity = false;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		binding = ActivityMainBinding.inflate(getLayoutInflater());
+		ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
 		setContentView(binding.getRoot());
 
 		NavHostFragment navHostFragment =

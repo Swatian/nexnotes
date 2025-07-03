@@ -35,6 +35,19 @@
     <string name="source_code">Source code</string>
     <string name="md_mode_header">Markdown mode</string>
 
+    <string name="backup_and_restore">Backup and restore</string>
+    <string name="backup_dialog_title">Backup data</string>
+    <string name="backup_dialog_message">This will export (backup) all data to a backup file in Downloads.</string>
+    <string name="import_dialog_title">Restore data</string>
+    <string name="import_dialog_message">You are about to import (restore) data from a backup file. This will overwrite existing data.</string>
+    <string name="export_button">Backup (Export)</string>
+    <string name="import_button">Restore (Import)</string>
+    <string name="backup_success">Backup created successfully</string>
+    <string name="backup_failed">Failed to create a backup file</string>
+    <string name="import_success">Data restored successfully</string>
+    <string name="import_failed">Failed to restore data from a backup file</string>
+    <string name="select_backup_file">Select backup file</string>
+
     <!-- errors -->
     <string name="generic_error">Something went wrong</string>
     <string name="browser_open_failed">No application found to open this link</string>

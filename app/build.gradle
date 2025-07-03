@@ -1,16 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
-    id "com.diffplug.spotless" version "6.25.0"
+    id "com.diffplug.spotless" version "7.0.4"
 }
 
 android {
     namespace 'com.swatian.nexnotes'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.swatian.nexnotes"
         minSdk 27
-        targetSdk 34
+        targetSdk 36
         versionCode 18
         versionName "1.8"
 
@@ -41,6 +41,9 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+    dependenciesInfo {
+        includeInApk = false
     }
 }
 
@@ -89,7 +92,7 @@ spotless {
 
         removeUnusedImports()
         googleJavaFormat().aosp()
-        indentWithTabs()
+        leadingSpacesToTabs()
         formatAnnotations()
     }
 }

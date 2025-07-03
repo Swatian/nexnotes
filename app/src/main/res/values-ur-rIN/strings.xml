@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_biometric_header">بائو میٹرک تالا</string>
+    <string name="created_with">تخلیق ہو گیا</string>
+    <string name="updated_with">Updated %s</string>
+    <string name="nothing_found">کافی سناٹا ہے یہاں</string>
+    <string name="delete_note_dialog_message">کیا آپ وقعی اس نوٹ کو مٹانا چاہتے ہے؟</string>
+    <plurals name="note_delete_message">
+        <item quantity="one">نوٹ مٹ گیا</item>
+        <item quantity="other">نوٹ مٹ گیے</item>
+    </plurals>
+    <string name="all_good">You\'re all caught up</string>
+    <string name="delete_notes">تمام نوٹ مٹا دو</string>
+    <string name="note_content_hint">یہاں نوٹ کرنا شروع کریں</string>
+    <string name="delete_all_notes_dialog_message">یہ آپ کے تمام نوٹ مٹا دے گا، اس کو پلٹا نہیں جا سکتا۔</string>
+    <string name="delete_topic_dialog_message">آپ ایک موضوع مٹانے جا رہے ہے۔ جاری رکھنے کے لیے ڈیلیٹ دبایں</string>
+    <string name="delete_topic_message">موضوع مٹا دیا گیا</string>
+    <string name="topic_created">موضوع تخلیق ہو گئی</string>
+    <string name="biometric_auth_title">بائیو میٹرک تصدیق</string>
+    <string name="biometric_auth_sub_title">بائیو میٹرک اسناد کے ذریعے کھولیں</string>
+    <string name="settings_saved">Settings saved</string>
+    <string name="enroll_biometric">Enroll biometric from phone settings</string>
+    <string name="biometric_not_supported">No biometric features available on this device</string>
+    <string name="biometric_not_available">بائو میٹرک فیچرز فی الوقت موجود نہیں</string>
+    <string name="settings_language_selector_dialog_title">زبان کا انتخاب کریں</string>
+    <string name="source_code">سورس کوڈ</string>
+    <string name="md_mode_header">مارکڈون موڈ</string>
+    <!-- errors -->
+    <string name="generic_error">Something went wrong</string>
+    <string name="browser_open_failed">اس لِنک کو کھولنے کے لیے کوئی ایپ نہیں ملی</string>
+    <string name="topic_exists">یہ موضوع پہلے سے ہے</string>
+    <string name="topic_min_characters">موضوع کو کم از کم 2 حروف طویل ہونا پڑے گا</string>
+    <!-- errors -->
+    <!-- generic terms -->
+    <string name="notes">نوٹ</string>
+    <string name="topics">موضوعات</string>
+    <string name="topic">موضوع</string>
+    <string name="settings">ترتیبات</string>
+    <string name="notifications">اطلاعات</string>
+    <string name="app">ایپ</string>
+    <string name="generic_img_copy">تصویر</string>
+    <string name="cancel">منسوخ</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="new_text">New</string>
+    <string name="error">error</string>
+    <string name="ok">ٹھیک ہے</string>
+    <string name="proceed">Proceed</string>
+    <string name="theme">Theme</string>
+    <string name="language">زبان</string>
+    <string name="active">Active</string>
+    <string name="delete">Delete</string>
+    <string name="accounts">Accounts</string>
+    <string name="edit">Edit</string>
+    <string name="remove">ہٹایں</string>
+    <string name="name">نام</string>
+    <string name="about">تفصیلات</string>
+    <string name="website">ویب سائٹ</string>
+    <string name="system">نظام</string>
+    <string name="search">تلاش کریں</string>
+    <string name="display">Display</string>
+    <string name="appearance">Appearance</string>
+    <string name="translation">ترجمہ</string>
+    <string name="security">Security</string>
+    <string name="version">Version</string>
+    <string name="links">لنکز</string>
+    <string name="close">بند کریں</string>
+    <string name="description">تفصیلات</string>
+    <string name="create">تخلیق کریں</string>
+    <string name="database">دیٹا بیس</string>
+    <string name="title">عنوان (لازمی)</string>
+    <string name="general">عام</string>
+    <string name="save">Save</string>
+    <!-- generic terms -->
+</resources>
