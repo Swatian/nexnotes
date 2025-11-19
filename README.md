@@ -3,6 +3,8 @@
 > **⚠️ Project Status: Archived**  
 > This project is no longer being actively developed or maintained.
 
+--------------------------------------------------------------------------------------------------------------------  
+
 [![License: GPL v3](https://raw.githubusercontent.com/Swatian/nexnotes/main/assets/license.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Release](https://img.shields.io/github/v/release/Swatian/nexnotes?display_name=release&label=release
 )](https://github.com/Swatian/nexnotes/releases) [![Crowdin](https://badges.crowdin.net/nexnotes/localized.svg)](https://crowdin.com/project/nexnotes)
 
